@@ -6,6 +6,11 @@ class dbmaster extends CI_Model
     {
         echo "<h1>Hello I Am  DataBase Master</h1>";
     }
+    public function insert_data($tname,$tdata)
+	{
+		return "hello insert query {$tname} {$tdata}";
+
+	}
 }
 
 

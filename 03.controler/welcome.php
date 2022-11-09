@@ -13,15 +13,56 @@ class welcome extends CI_Controller {
 		// $this->Dunit->index();
 		$this->dbmaster->index();
 	}
+	########################################################################
+	public function insert()
+	{
+		//$this->load->model('Dbmaster');
+		//$data['arr']="hello";
+		//$emp=$this->Dbmaster->insert_data();
+		//print_r($_POST);
+		//echo $_POST['emp_name'];
+		//$data['name']="Inseret Page";
+		print_r($_POST);
+		echo $_POST['emp_name'];
+		$this->load->view('master/head');
+		$this->load->view('insert');
+		$this->load->view('master/footer');
+		
+	}
+	##########################################################################
+	public function view()
+	{
+		$this->load->view('master/head');
+		$this->load->view('view');
+		$this->load->view('master/footer');
+	}
+	public function update()
+	{
+		$this->load->view('master/head');
+		$this->load->view('update');
+		$this->load->view('master/footer');
+	}
+	public function delete()
+	{
+		$this->load->view('master/head');
+		$this->load->view('delete');
+		$this->load->view('master/footer');
+	}
+
+
+
+
+
+
+
+
+
 	public function fun()
 	{
 		echo "<h2>This is Helper Module</h2>";
 
 		$this->load->helper("test");
 		test();
-
-
-		
 	}
 	public function api()
 	{
